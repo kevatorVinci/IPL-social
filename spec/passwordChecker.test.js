@@ -24,6 +24,9 @@ it("should return false if the password contains 'IPL' (case-insensitive)", func
   expect(main.isValidPassword("ipl1234")).toBe(false);
   expect(main.isValidPassword("IPl@1234")).toBe(false);
 });
+it("should return true if the password is valid", function () {
+  expect(main.isValidPassword("valid@1234")).toBe(true);
+});
 
 
 });
