@@ -14,8 +14,13 @@ describe("password validation", function () {
     expect(main.isValidPassword("123456789")).toBe(false);
   });
 
+  it("should return false if the password does not contain a number", function () {
+    expect(main.isValidPassword("abcdefgh")).toBe(false);
 
 
+
+
+});
 
 });
 

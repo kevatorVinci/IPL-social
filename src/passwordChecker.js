@@ -7,9 +7,14 @@ export class Main {
       if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
         return false;
       }
+
+      if (!/\d/.test(password)) {
+        return false; 
+      }
       return true; 
     }
-  
+
+    
    
 
 
