@@ -1,24 +1,28 @@
 name: CI Pipeline
 
 on:
+  push:
+    branches:
+      - main  # Déclenche la pipeline lors d'un push sur la branche 'main'
   pull_request:
     branches:
-      - main
+      - main  # Déclenche la pipeline lors d'une PR vers 'main'
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest  # Utilise une image Ubuntu pour exécuter les tests
+
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v2  # Récupère le code du dépôt
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'  # Spécifie la version de Node.js (ajuste si nécessaire)
 
-      - name: Install Dependencies
-        run: npm install
+    - name: Install dependencies
+      run: npm install  # Installe les dépendances du projet
 
-      - name: Run Tests
-        run: npm test
+    - name: Run tests
+      run: npm test  # Lance les tests définis dans package.json
