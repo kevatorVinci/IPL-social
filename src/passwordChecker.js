@@ -11,6 +11,7 @@ export class Main {
       if (!/\d/.test(password)) {
         return false; 
       }
+      if (/ipl/i.test(password)) return false;
       return true; 
     }
 
