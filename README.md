@@ -93,3 +93,9 @@ Les permissions ont été accordées aux emails suivants :
 
 sebastien.debeauffort@vinci.be
 jerome.plumat@vinci.be
+
+🔹 Aide et Ressources
+Ce projet a été réalisé avec l'assistance de ChatGPT pour structurer le pipeline CI/CD, appliquer la méthodologie TDD, et rédiger la documentation.
+
+Toutes les étapes ont été suivies et mises en œuvre personnellement, en respectant les consignes de l'examen.
+
